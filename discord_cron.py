@@ -19,7 +19,7 @@ async def speak(interval, channel, text):
 
 @client.event
 async def on_ready():
-    for line in os.environ['DISCORD_CRON_CRONTAB'].split('|'):
+    for line in os.environ['DISCORD_CRON_CRONTAB'].split('&'):
         try:
             interval, channel, text = line.split(',', 2)
 
